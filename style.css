@@ -1,0 +1,10 @@
+body{
+    background-color: gray;
+}
+
+
+.row div{
+    background: turquoise;
+    padding: 1em;
+    border: 1px solid gray;
+}
