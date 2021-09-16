@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Imágenes de fondo Responsive</title> 
+    <!--[if lt IE 9]> 
+    <script 
+src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+    </script> 
+    <![endif]--> 
+    <style>
+        
+        header p{
+            text-align: right;
+        }
+        
+ 
+        /* La imagen más pequeña va primero, sin condiciones, porque es para el celular más chico */ 
+        .logo{ 
+            background-image: url(logo-chico.jpg); 
+            background-repeat: no-repeat;
+            height: 150px;
+        } 
+ 
+        /* Logo mediano, para anchos de pantalla de entre 480 y 800px */ 
+        @media screen and (min-width:480px){ 
+
+            .logo{ 
+                background-image: url(logo-mediano.jpg); 
+                height: 270px;
+            } 
+        }
+        
+        /* Logo grande, para anchos de pantalla de entre 800 y 1280px */ 
+        @media screen and (min-width:800px){ 
+
+            .logo{ 
+                background-image: url(logo-grande.jpg); 
+                height: 450px;
+            } 
+        }
+        
+        /* Logo gigante, para anchos de pantalla de más de 1280px */ 
+        @media screen and (min-width:1280px){ 
+
+            .logo{ 
+                background-image: url(logo-gigante.jpg); 
+                height: 600px;
+            } 
+        } 
+
+    </style>
+</head> 
+<body> 
+    
+    <header class="logo">
+           <p>Slogan de la empresa</p>   
+    </header>
+    
+    <div id="columna1">
+        <h1>Esta es la columna 1</h1>
+        <p>Este es el texto de esta columna, que podría ser el texto de una noticia, un texto largo cualquiera que se adaptará a medida que esté disponible un ancho de pantalla mayor.</p>
+    </div>
+    
+    <div id="columna2">
+        <h1>Esta es la columna 2</h1>
+        <p>Este es el texto de esta columna, que podría ser el texto de una noticia, un texto largo cualquiera que se adaptará a medida que esté disponible un ancho de pantalla mayor.</p>
+    </div>
+    
+    <div id="columna3">
+        <h1>Esta es la columna 3</h1>
+        <p>Este es el texto de esta columna, que podría ser el texto de una noticia, un texto largo cualquiera que se adaptará a medida que esté disponible un ancho de pantalla mayor.</p>
+    </div>
+
+   
+</body> 
+</html> 

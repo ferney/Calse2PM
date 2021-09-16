@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Layout Responsive</title> 
+    <!--[if lt IE 9]> 
+    <script 
+src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+    </script> 
+    <![endif]--> 
+    <style>
+ 
+        body {  font-size:80%; } /* porcentaje base, solo en el body */ 
+ 
+        p{  font-size:0.9em; } 
+        h1{    font-size:2em; } 
+        h2{    font-size:1.4em; } 
+        #pie {    font-size:1.2em; } 
+        .epigrafes{   font-size:1.1em; } 
+        /* fin de zona común a todas las resoluciones */ 
+
+        
+        @media screen and (min-width:800px) { 
+            
+            body { 
+                font-size:100%; /* ampliamos los textos si mide más de 800px */ 
+            } 
+
+        } /* fin de la zona para más de 800px de ancho de pantalla */
+        
+
+        @media screen and (min-width:1200px) { 
+
+            body { 
+                font-size:120%; /* ampliamos más aún los textos si mide más de 1200px */ 
+            }
+            
+        } /* fin de la zona para más de 1200px de ancho de pantalla */ 
+
+    </style>
+</head> 
+<body> 
+
+    <div id="columna1">
+        <h1>Esta es la columna 1</h1>
+        <p>Este es el texto de esta columna, que podría ser el texto de una noticia, un texto largo cualquiera que se adaptará a medida que esté disponible un ancho de pantalla mayor.</p>
+    </div>
+    
+    <div id="columna2">
+        <h1>Esta es la columna 2</h1>
+        <p>Este es el texto de esta columna, que podría ser el texto de una noticia, un texto largo cualquiera que se adaptará a medida que esté disponible un ancho de pantalla mayor.</p>
+    </div>
+    
+    <div id="columna3">
+        <h1>Esta es la columna 3</h1>
+        <p>Este es el texto de esta columna, que podría ser el texto de una noticia, un texto largo cualquiera que se adaptará a medida que esté disponible un ancho de pantalla mayor.</p>
+    </div>
+
+   
+</body> 
+</html> 

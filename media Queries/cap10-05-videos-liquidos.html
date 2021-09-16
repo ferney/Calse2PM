@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Videos líquidos</title> 
+    <!--[if lt IE 9]> 
+    <script 
+src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+    </script> 
+    <![endif]--> 
+    <style>
+            
+          video {
+            width: 100%;
+            height: auto;
+          }
+          
+          .contenedor {
+            width: 70%;
+            padding: 5%;
+            margin:0px auto;
+            background:#fff;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+          }
+          
+          .vendor {
+            padding: 2%;
+            background: #d1eed1;
+            margin-bottom: 2em;
+          }
+          
+          .unsupported {
+            background: #fddfde;
+          }
+    </style>
+</head> 
+<body> 
+
+    <div class="contenedor">
+        <div class="vendor">
+        	<iframe width="425" height="349" src="http://www.youtube.com/embed/FKWwdQu6_ok" frameborder="0" allowfullscreen></iframe>
+	      </div>
+	
+        <div class="vendor">
+        	<iframe src="http://player.vimeo.com/video/25708134?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0"></iframe>
+        </div>
+   
+      </div>
+    
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+      <script src="jquery.fitvids.js"></script>
+      <script>
+        // Colocar el class o id del contenedor de los videos
+        $(".contenedor").fitVids();
+      </script>
+
+   
+</body> 
+</html> 

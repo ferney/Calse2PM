@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Imágenes líquidas</title> 
+    <!--[if lt IE 9]> 
+    <script 
+src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+    </script> 
+    <![endif]--> 
+    <style>
+        
+        img, video, object { max-width:100%; } 
+ 
+    /* Diseño para celulares */ 
+    #columna1, #columna2, #columna3 { 
+        float:none; 
+        width:100%; 
+    } 
+        
+    /* Diseño para tabletas */ 
+    @media screen and (min-width: 800px){ 
+    
+        #columna1, #columna2{ 
+            float:left; 
+            width:50%; 
+        }
+        
+    }
+        
+    /* Diseño para PC */ 
+    @media screen and (min-width: 1025px){ 
+ 
+        #columna1, #columna2, #columna3{ 
+            float:left; 
+            width:33%; 
+        } 
+        
+    }
+ 
+
+    </style>
+</head> 
+<body> 
+
+    <div id="columna1">
+        <h1>Esta es la columna 1</h1>
+        <p>Este es el texto de esta columna, que podría ser el texto de una noticia, un texto largo cualquiera que se adaptará a medida que esté disponible un ancho de pantalla mayor.</p>
+    </div>
+    
+    <div id="columna2">
+        <h1>Esta es la columna 2</h1>
+        <p>Este es el texto de esta columna, que podría ser el texto de una noticia, un texto largo cualquiera que se adaptará a medida que esté disponible un ancho de pantalla mayor.</p>
+        <p><img src="logo-gigante.jpg" alt="Logo de HTML5"></p>
+    </div>
+    
+    <div id="columna3">
+        <h1>Esta es la columna 3</h1>
+        <p>Este es el texto de esta columna, que podría ser el texto de una noticia, un texto largo cualquiera que se adaptará a medida que esté disponible un ancho de pantalla mayor.</p>
+    </div>
+
+   
+</body> 
+</html> 
