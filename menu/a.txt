@@ -1,0 +1,99 @@
+<form action="" class="contenedor">
+  <ul class="menu">
+    <li>
+      <a href="">sitios</a>
+      <ul>
+        <li><a href="">playas</a></li>
+        <li><a href="">cascadas</a></li>
+        <li><a href="">rios</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="">paquetes</a>
+      <ul>
+        <li><a href="">paquete 1</a></li>
+        <li><a href="">paquete 2</a></li>
+        <li><a href="">paquete 3</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="">hoteles</a>
+      <ul>
+        <li><a href="">hotel 1</a></li>
+        <li><a href="">hotrl 2</a></li>
+        <li><a href="">hotel 3</a></li>
+      </ul>
+    </li>
+    <li><a href="">contacto</a></li>
+  </ul>
+</form>
+
+--------------------------------------
+
+body {
+  background: burlywood;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: black;
+  background-color: darkcyan;
+}
+.contenedor {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+.menu {
+  float: left;
+  left: 50%;
+  padding: 0;
+  position: relative;
+}
+.menu li {
+  /*estilo item*/
+  margin: 4px 8px 4px 8px;
+  overflow: hidden;
+  float: left;
+  position: relative;
+  right: 50%;
+}
+
+.menu li a {
+  height: 32px;
+  line-height: 32px;
+  padding: 8px 16px 8px 16px;
+}
+
+.menu li:hover a {
+  background-color: cornsilk;
+  color: black;
+}
+
+.menu li:hover ul li a {
+  background-color: blueviolet;
+  color: white;
+  padding-left: 16px;
+}
+
+/*
+ocultar y submenu*/
+.menu li ul li {
+  height: 0;
+  line-height: 12px;
+  padding: 0;
+  margin: 4px 8px 4px 8px;
+  overflow: hidden;
+
+  float: none;
+  position: relative;
+  right: 0;
+  transition: 0.5s;
+}
+
+.menu li:hover ul li {
+  min-height: 16px;
+  display: block;
+  float: none;
+}
