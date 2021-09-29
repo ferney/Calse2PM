@@ -1,0 +1,185 @@
+/*function empleado(){
+  this.nombre="";
+  this.apellido=[];
+  casa=function(){
+    return true;
+  }
+}
+
+var caso={
+  nombre:'maria',
+  descripcion:function(){
+    return 'usted es '+this.nombre;
+  }
+}
+
+console.log(caso.descripcion());
+
+var x=['clave':'valor','clave':'valor2'];
+
+
+var miFuncion=function(param1,param2){
+    this.param1=param1;
+    this.param2=param2;  
+}
+
+var miObjeto=new miFuncion('valor1','valor2');
+console.log(miObjeto.param1);
+console.log(miObjeto.param2);
+
+var miOtraFuncion=function(param1){
+    this.param1=param1;
+    this.metodo1=function(){
+      console.log(this.param1);
+    };  
+}
+//this.window===object();true o false
+
+var miObjeto2= new miOtraFuncion('hola');
+miObjeto2.metodo1();
+
+var persona=function(nom,ed,al,pso){
+  this.nom=nom;
+  this.ed=ed;
+  this.al=al;
+  this.pso=pso;
+  
+  this.mostrarDatos=function(){
+    console.log('Nombre: '+this.nom +', Edad: '+this.ed+', Altura:'+this.al+', Peso: '+this.pso);
+  }
+  this.mayor=function(){
+    if(this.ed>=18){
+      console.log(this.nom+ ' es mayor de edad');
+    }
+    else{
+      console.log(this.nom+ ' es menor de edad');
+    }
+  }
+  
+}
+
+var carlos=new persona('carlos',27,1.80,80);
+carlos.mostrarDatos();
+carlos.mayor();
+var carlos2=new persona('carlos',17,1.80,80);
+carlos2.mostrarDatos();
+carlos2.mayor();
+
+var paquete=function(alto,largo,ancho,contenido){
+  this.alto=alto;
+  this.largo=largo;
+  this.ancho=ancho;
+  this.contenido=contenido || '';
+  
+  this.ingresar=function(objeto){
+    if(objeto.alto<=this.alto && objeto.largo<=this.largo && objeto.ancho<=this.ancho && this.contenido===''){
+      console.log(this.contenido=objeto);
+    }
+    else{
+      console.log('la caja esta llena');
+    }
+  }
+  
+  this.ver=function(){
+    if(this.contenido===''){
+      console.log('la caja esta vacia');
+    }
+    else{
+      console.log('la caja contiene un(a) '+this.contenido.nombre);
+    }
+  }
+  
+  this.vaciar=function(){
+    this.contenido='';
+  }
+  
+}
+
+
+var objeto=function(alto,ancho,largo,nombre){
+  this.alto=alto;
+  this.ancho=ancho;
+  this.largo=largo;
+  this.nombre=nombre;  
+}
+
+var micaja=new paquete(100,100,100);
+var miObjeto= new objeto(50,50,50,'laptop');
+micaja.ingresar(miObjeto);
+micaja.ver();
+micaja.vaciar()
+var miObjeto2= new objeto(100,150,50,'minibar');
+micaja.ingresar(miObjeto2);
+micaja.ver();
+micaja.vaciar()
+
+
+
+class persona{  
+  constructor(nombre,edad){
+    this.nombre=nombre;
+    this.edad=edad;
+  }
+  
+  presentar(){
+    return 'hola, me llamo '+this.nombre+ ', tengo '+this.edad+ ' años ';
+  }
+}
+
+
+class tipo extends persona{
+  
+  constructor(nombre,edad,cargo){
+    super(nombre,edad);
+    this.cargo=cargo;
+  }    
+  presentar(){
+    console.log(super.presentar()+ ' y soy desarrollador '+ this.cargo);
+  }
+}
+
+var carlos=new tipo('CARLOS',27,'back-end');
+carlos.presentar();
+
+class persona{
+  constructor(nombre,edad){
+    this.nombre=nombre;
+    this.edad=edad;
+  }
+  
+  get ver(){
+    
+    return this.nombre;
+  }
+  get ver2(){
+    
+    return this.edad;
+  }
+  
+  set nNombre(nuevo){
+    this.nombre=nuevo;
+  }
+  
+}
+
+var carlos=new persona(45,45);
+carlos.ver;
+carlos.ver2;*/
+
+Array.prototype.igualdad=function(palabra){
+  
+  igual=0;
+  
+  for(var i=0;i<this.length;i++){
+    if(this[i]==palabra){
+      igual++;
+    }
+  }
+  
+  console.log('hay '+igual+' palabras repetidas');
+  
+}
+
+clase=Array('carlos','dario','santiago', 'diana', 'marcela','tatiana','jenny');
+clase2=Array('carolina','dario','tatiana', 'gustavo', 'marcos','daniela','jose');
+clase.igualdad('dario');
