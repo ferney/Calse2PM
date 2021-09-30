@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        fetch("https://apis.datos.gob.ar/georef/api/provincias")
+            .then(response => response.json())
+            .then(datos => {
+                for (let provincia of datos.provincias)
+                    document.write(`${provincia.id} ${provincia.nombre} <br>`);
+            });
+    </script>
+</body>
+</html>
