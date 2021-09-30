@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <meta charset="UTF-8">
+</head>
+<body>
+   <script>
+
+    fetch("https://scratchya.com.ar/javascriptya/listadoproductos.php")
+      .then(response => response.json())
+      .then(datos => {
+        for (let articulo of datos)
+          document.write(`${articulo.codigo} ${articulo.descripcion} ${articulo.precio}<br>`);
+      });
+  </script>
+</body>
+</html>
